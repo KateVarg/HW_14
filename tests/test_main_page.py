@@ -1,15 +1,14 @@
-from selene import browser, by
+from pages.main_page import open_browser, check_open_details, check_open_shop
 import allure
 
 
-@allure.step('Открытие сайта')
-def open(self):
-    browser.open('')
-    return self
+@allure.story('Переход на страницу "Подробнее ..."')
+def test_open_details():
+    open_browser()
+    check_open_details()
 
 
-@allure.step('Переход на страницу "Подробнее о питомнике"')
-def check_open_details():
-    browser.element('.uk-button-primary').click()
-    browser.element(by.partial_text('Наши питомцы обладают хорошей и'))
-
+@allure.story('Переход на страницу "Магазин"')
+def test_open_shop():
+    open_browser()
+    check_open_shop()

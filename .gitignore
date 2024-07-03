@@ -1,2 +1,6 @@
 .venv
 .idea
+.env
+.DS_Store
+tests/allure-results
+/notifications
