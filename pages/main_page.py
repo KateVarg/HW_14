@@ -45,7 +45,7 @@ class QuestionMainPage:
         self.question_element_send_button = browser.element('#mod-rscontact-submit-btn-91')
 
     @allure.step('Ввод имени')
-    def fill_name(self, user: User, question_element_name):
+    def fill_name(self, user: User):
         self.question_element_name.perform(command.js.scroll_into_view)
         self.question_element_name.type(user.name)
         return self
@@ -66,7 +66,7 @@ class QuestionMainPage:
         return self
 
     @allure.step('Отправка формы с вопросом')
-    def send_form_question(self, question_element_send_button):
+    def send_form_question(self):
         self.question_element_send_button.perform(command.js.scroll_into_view)
         self.question_element_send_button.click()
         return self
