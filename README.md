@@ -27,12 +27,12 @@
 
 <br>Локально
 
-<details><summary>1. Склонировать репозиторий:
+<details><summary>1. Склонировать репозиторий:</summary>
 
 ```
 git clone https://github.com/KateVarg/HW_14.git
 ```
-</summary></details>
+</details>
 
 <details><summary>2. Установить зависимости и запустить тесты:
 
