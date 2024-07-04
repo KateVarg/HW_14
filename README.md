@@ -80,13 +80,13 @@ allure serve allure-results/
 Реализована отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
 <details><summary>Пример отчета</summary>
 
-<img src="resources/report_telegram.jpeg">
+<img src="resources/report_telegram.jpeg" alt="report Telegram">
 
 </details>
 
 <details><summary>Пример видеоотчета о прохождении автотестов</summary>
 
-<video src="resources/video_example.gif" wight="100" height="100"></video>
+<img src="resources/video_example.gif" alt="gif example report">
 
 </details>
 
