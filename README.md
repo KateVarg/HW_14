@@ -7,7 +7,7 @@
 </p>
 
 <p>
-Тест-кейсы для тестового сайта приемника для собак "Собаседник"
+Тест-кейсы для тестового сайта питомника для собак "Собаседник"
 </p>
 
 ## Используемые инструменты
@@ -23,11 +23,11 @@
 <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="pycharm" alt="pycharm" width="40" height="40"/>&nbsp
 </div>
 
-## Запуск
+## Запуск тестов и получение отчета
 
 <details><summary>Локально</summary>
 
-<br>1. Склонировать репозиторий:
+1. Склонировать репозиторий:
 
 ```
 git clone https://github.com/KateVarg/HW_14.git
@@ -41,16 +41,27 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Запустить тесты:
+3. Запустить тесты:
 
 ```
 pytest .
 ```
+
+4. Для получения отчета в allure запустить команду:
+```
+allure serve allure-results/
+```
+
+5. В результате:
+
+<img src="resources/allure-report-local.png">
+
+
 </details>
 
 <details><summary>Удалённо</summary>
 
-<br>1. Склонировать репозиторий:
+1. Склонировать репозиторий:
 
 ```
 git clone https://github.com/KateVarg/HW_14.git
@@ -75,18 +86,6 @@ pytest .
 
 ## Отчёты
 
-<details><summary>Локально</summary>
-<br>
 
-```
-allure serve allure-results/
-```
-
-В результате:
-
-<img src="resources/allure-report-local.png">
-
-
-</details>
 
 
