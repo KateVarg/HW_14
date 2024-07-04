@@ -20,12 +20,12 @@
 <img src="https://user-images.githubusercontent.com/25181517/179090274-733373ef-3b59-4f28-9ecb-244bea700932.png" title="jenkins" alt="jenkins" width="40" height="40"/>&nbsp
 <img src="https://camo.githubusercontent.com/501c9d05b6660ba5e1a8753b8461e60d7ff1614656102c254ab800e14a6b19fa/68747470733a2f2f616c6c7572657265706f72742e6f72672f7075626c69632f696d672f616c6c7572652d7265706f72742e737667" title="allure" alt="allure" width="40" height="40"/>&nbsp
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/pycharm/pycharm-original.svg" title="pycharm" alt="pycharm" width="40" height="40"/>&nbsp
-<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="pycharm" alt="pycharm" width="40" height="40"/>&nbsp
+<img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="40" height="40"/>&nbsp
 </div>
 
 ## Запуск тестов и получение отчета
 
-**Локально**
+### **Локально**
 
 <details><summary>1. Склонировать репозиторий</summary>
 
@@ -57,33 +57,38 @@ allure serve allure-results/
 
 </details>
 
-<details><summary>Удалённо</summary>
+### **Удалённо**
 
-1. Склонировать репозиторий:
+Удаленный запуск автотестов осуществляется при помощи Jenkins. Для этого необходимо выполнить следующие действия:
 
-```
-git clone https://github.com/KateVarg/HW_14.git
-```
+1. Открыть [проект на Jenkins] (https://jenkins.autotests.cloud/job/VarganovaKate_HW_14/)
 
-2. Установить зависимости:
+<details><summary>2. Нажать на Build now</summary>
 
-```
-poetry install
-```
-
-3. Создать `.env` в корне проекта, внутри него указать:
-
-- **SELENOID_LOGIN**, **SELENOID_PASS**, **SELENOID_URL** — учетные данные и URL для удаленного запуска
-
-4. Запустить тесты:
-```
-pytest .
-```
+<img src="resources/jenkins.jpeg">
 
 </details>
 
-## Отчёты
+<details><summary>3. Дождаться окончания выполнения автотестов и нажать на иконку allure <img src="https://camo.githubusercontent.com/501c9d05b6660ba5e1a8753b8461e60d7ff1614656102c254ab800e14a6b19fa/68747470733a2f2f616c6c7572657265706f72742e6f72672f7075626c69632f696d672f616c6c7572652d7265706f72742e737667" title="allure" alt="allure" width="20" height="20"/> для просмотра отчета</summary>
 
+<img src="resources/jenkins2.jpeg">
 
+</details>
+___
+
+### **Дополнительно**
+
+- Реализована отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
+<details><summary>Пример отчета</summary>
+
+<img src="resources/report_telegram.jpeg">
+
+</details>
+
+- <details><summary>Пример видеоотчета о прохождении автотестов</summary>
+
+<img src="resources/video.html">
+
+</details>
 
 

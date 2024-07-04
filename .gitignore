@@ -2,5 +2,6 @@
 .idea
 .env
 .DS_Store
-tests/allure-results
+/tests/allure-results
 /notifications
+/tests/allure-report
