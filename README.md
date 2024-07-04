@@ -25,37 +25,31 @@
 
 ## Запуск тестов и получение отчета
 
-<details><summary>Локально</summary>
+<br>Локально
 
-1. Склонировать репозиторий:
+<details><summary>1. Склонировать репозиторий:
 
 ```
 git clone https://github.com/KateVarg/HW_14.git
 ```
+</summary>
 
-2. Установить зависимости:
+2. Установить зависимости и запустить тесты:
 
 ```
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-```
-
-3. Запустить тесты:
-
-```
 pytest .
 ```
 
-4. Для получения отчета в allure запустить команду:
+3. Для получения отчета о прохождении тестов в allure необходимо запустить команду:
 ```
 allure serve allure-results/
 ```
 
-5. В результате:
-
-<img src="resources/allure-report-local.png">
-
+4. После выполнения команды откроется браузер с отчетом:
+<img src="resources/report_allure.jpeg">
 
 </details>
 
