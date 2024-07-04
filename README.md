@@ -76,18 +76,18 @@ allure serve allure-results/
 </details>
 ___
 
-### **Дополнительно**
+## **Дополнительно**
 
-- Реализована отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
+Реализована отправка результатов тестирования в Telegram <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" title="telegram" alt="telegram" width="20" height="20"/>  
 <details><summary>Пример отчета</summary>
 
 <img src="resources/report_telegram.jpeg">
 
 </details>
 
-- <details><summary>Пример видеоотчета о прохождении автотестов</summary>
+<details><summary>Пример видеоотчета о прохождении автотестов</summary>
 
-<img src="resources/video.html">
+<img src="resources/video_example.gif">
 
 </details>
 
