@@ -86,7 +86,7 @@ allure serve allure-results/
 
 <details><summary>Пример видеоотчета о прохождении автотестов</summary>
 
-<video src="resources/video_example.gif"></video>
+<video src="resources/video_example.gif" wight="100" height="100"></video>
 
 </details>
 
