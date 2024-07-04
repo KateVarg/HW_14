@@ -32,9 +32,9 @@
 ```
 git clone https://github.com/KateVarg/HW_14.git
 ```
-</summary>
+</summary></details>
 
-2. Установить зависимости и запустить тесты:
+<details><summary>2. Установить зависимости и запустить тесты:
 
 ```
 python -m venv .venv
@@ -42,16 +42,20 @@ source .venv/bin/activate
 pip install -r requirements.txt
 pytest .
 ```
+</summary></details>
 
-3. Для получения отчета о прохождении тестов в allure необходимо запустить команду:
+<details><summary>3. Для получения отчета о прохождении тестов в allure необходимо запустить команду:
+
 ```
 allure serve allure-results/
 ```
+</summary></details>
 
-4. После выполнения команды откроется браузер с отчетом:
-<img src="resources/report_allure.jpeg">
+<details><summary>4. После выполнения команды откроется браузер с отчетом:
+    
+    <img src="resources/report_allure.jpeg">
 
-</details>
+</summary></details>
 
 <details><summary>Удалённо</summary>
 
