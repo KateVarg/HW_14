@@ -53,7 +53,7 @@ allure serve allure-results/
 
 <details><summary>4. После выполнения команды откроется браузер с отчетом</summary>
     
-    <img src="resources/report_allure.jpeg">
+<img src="resources/report_allure.jpeg">
 
 </details>
 
