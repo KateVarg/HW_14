@@ -74,7 +74,6 @@ allure serve allure-results/
 <img src="resources/jenkins2.jpeg">
 
 </details>
-___
 
 ## **Дополнительно**
 
@@ -87,7 +86,7 @@ ___
 
 <details><summary>Пример видеоотчета о прохождении автотестов</summary>
 
-<img src="resources/video_example.gif">
+<video src="resources/video_example.gif"></video>
 
 </details>
 
