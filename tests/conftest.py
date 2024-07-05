@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from selenium import webdriver
 
-from utils import attach
+from guru_qahacking_tests.utils import attach
 
 
 @pytest.fixture(scope="session", autouse=True)

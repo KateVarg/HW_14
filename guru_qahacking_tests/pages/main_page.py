@@ -1,24 +1,27 @@
-from selene import browser, by, command, be
+from selene import browser, by, command, be, have
 import allure
-from data.emails import Email
-from data.user import User
+from guru_qahacking_tests.data.emails import Email
+from guru_qahacking_tests.data.user import User
 
 
-@allure.step('Открытие сайта')
-def open_browser():
-    browser.open('')
+class MainPage:
 
+    @allure.step('Открытие сайта')
+    def open_browser(self):
+        browser.open('')
+        return self
 
-@allure.step('Переход на страницу "Подробнее о питомнике"')
-def check_open_details():
-    browser.element('.uk-button-primary').click()
-    browser.element(by.partial_text('Наши питомцы обладают хорошей и'))
+    @allure.step('Переход на страницу "Подробнее о питомнике"')
+    def check_open_details(self):
+        browser.element('.uk-button-primary').click()
+        browser.element(by.partial_text('Наши питомцы обладают хорошей и'))
+        return self
 
-
-@allure.step('Переход на страницу "Магазин"')
-def check_open_shop():
-    browser.element('.uk-navbar-nav').element('.uk-parent').click()
-    browser.element(by.partial_text('Каталог товаров'))
+    @allure.step('Переход на страницу "Магазин"')
+    def check_open_shop(self):
+        browser.element('.uk-navbar-nav').element('.uk-parent').click()
+        browser.element(by.partial_text('Каталог товаров'))
+        return self
 
 
 class SubscriptionMainPage:
@@ -35,6 +38,16 @@ class SubscriptionMainPage:
     @allure.step('Отправка email')
     def send_email(self):
         browser.element('.uk-form-icon').click()
+        return self
+
+    @allure.step('Сообщение при успешной отправке e-mail')
+    def success_email(self):
+        browser.element('.message').should(have.text('Подписка оформлена'))
+        return self
+
+    @allure.step('Сообщение при отправке некорректного e-mail')
+    def error_email(self):
+        browser.element('.message').should(have.text('Введите корректный email'))
         return self
 
 
@@ -73,4 +86,4 @@ class QuestionMainPage:
 
     @allure.step('Проверка обязательного поля E-mail')
     def show_error(self):
-        browser.element('#mod-rscontact-email-91-error').should(be.visible)
+        browser.element('#mod-rscontact-email-91-error').should(have.text('Please type your e-mail address.')).should(be.visible)
