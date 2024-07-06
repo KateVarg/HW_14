@@ -24,6 +24,9 @@ class MainPage:
         return self
 
 
+main_page = MainPage()
+
+
 class SubscriptionMainPage:
 
     def __init__(self):
@@ -49,6 +52,9 @@ class SubscriptionMainPage:
     def error_email(self):
         browser.element('.message').should(have.text('Введите корректный email'))
         return self
+
+
+subscription = SubscriptionMainPage()
 
 
 class QuestionMainPage:
@@ -87,3 +93,6 @@ class QuestionMainPage:
     @allure.step('Проверка обязательного поля E-mail')
     def show_error(self):
         browser.element('#mod-rscontact-email-91-error').should(have.text('Please type your e-mail address.')).should(be.visible)
+
+
+question = QuestionMainPage()

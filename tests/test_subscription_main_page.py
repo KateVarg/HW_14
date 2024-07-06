@@ -1,12 +1,10 @@
-from guru_qahacking_tests.pages.main_page import MainPage, SubscriptionMainPage
+from guru_qahacking_tests.pages.main_page import main_page, subscription
 import allure
 from guru_qahacking_tests.data.emails import Email
 
 
 @allure.story('Оформление подписки с корректным email')
 def test_right_subscription():
-    main_page = MainPage()
-    subscription = SubscriptionMainPage()
     email = Email(
         'test@test.com'
     )
@@ -16,8 +14,6 @@ def test_right_subscription():
 
 @allure.story('Оформление подписки с некорректным email')
 def test_wrong_subscription():
-    main_page = MainPage()
-    subscription = SubscriptionMainPage()
     email = Email(
         'testtest.com'
     )

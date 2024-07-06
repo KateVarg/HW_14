@@ -14,3 +14,6 @@ class ShopPage:
         browser.element('.productitem_2').element('.oiproduct').element('.button_detail').click()
         browser.element('#comjshop').should(have.text('Перекус для собачки'))
         return self
+
+
+shop_page = ShopPage()

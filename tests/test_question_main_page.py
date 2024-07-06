@@ -1,12 +1,10 @@
-from guru_qahacking_tests.pages.main_page import MainPage, QuestionMainPage
+from guru_qahacking_tests.pages.main_page import main_page, question
 import allure
 from guru_qahacking_tests.data.user import User
 
 
 @allure.story('Заполнение и отправка формы для отправки вопроса')
 def test_fill_form_question():
-    main_page = MainPage()
-    question = QuestionMainPage()
     user = User(
         'Катя Варганова',
         'test@test.com',
@@ -16,13 +14,9 @@ def test_fill_form_question():
     main_page.open_browser()
     question.fill_name(user).fill_mail(user).fill_phone(user).fill_question(user).send_form_question()
 
-    assert question.send_form_question()
-
 
 @allure.story('Отправка пустой формы')
 def test_send_empty_form_question():
-    main_page = MainPage()
-    question = QuestionMainPage()
 
     main_page.open_browser()
     question.send_form_question().show_error()
