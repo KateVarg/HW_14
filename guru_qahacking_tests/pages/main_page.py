@@ -1,4 +1,4 @@
-from selene import browser, by, command, be, have
+from selene import browser, command, be, have
 import allure
 from guru_qahacking_tests.data.emails import Email
 from guru_qahacking_tests.data.user import User
@@ -12,15 +12,23 @@ class MainPage:
         return self
 
     @allure.step('Переход на страницу "Подробнее о питомнике"')
-    def check_open_details(self):
+    def open_details(self):
         browser.element('.uk-button-primary').click()
-        browser.element(by.partial_text('Наши питомцы обладают хорошей и'))
+        return self
+
+    @allure.step('Провека перехода на страницу "Подробнее о питомнике"')
+    def check_open_details(self):
+        browser.element('.uk-text-lead').should(have.text('Наши питомцы обладают хорошей и'))
         return self
 
     @allure.step('Переход на страницу "Магазин"')
+    def open_shop(self):
+        browser.element('.uk-navbar-nav').element('.uk-parent').double_click()
+        return self
+
+    @allure.step('Проверка перехода на страницу "Магазин"')
     def check_open_shop(self):
-        browser.element('.uk-navbar-nav').element('.uk-parent').click()
-        browser.element(by.partial_text('Каталог товаров'))
+        browser.element('#comjshop').should(have.text('Каталог товаров'))
         return self
 
 
@@ -90,7 +98,12 @@ class QuestionMainPage:
         self.question_element_send_button.click()
         return self
 
-    @allure.step('Проверка обязательного поля E-mail')
+    @allure.step('Получение подтверждения отправки формы')
+    def success_form_question(self):
+        browser.element('#mod-rscontact-container-91').should(have.text('Мы получили ваш вопрос! Ответи в ближайшее время.'))
+        return self
+
+    @allure.step('Ошибка, если поле E-mail пустое')
     def show_error(self):
         browser.element('#mod-rscontact-email-91-error').should(have.text('Please type your e-mail address.')).should(be.visible)
 

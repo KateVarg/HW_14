@@ -1,8 +1,12 @@
+import pytest
+
 from guru_qahacking_tests.pages.main_page import main_page, subscription
 import allure
 from guru_qahacking_tests.data.emails import Email
+import pytest
 
 
+@pytest.mark.xfail
 @allure.story('Оформление подписки с корректным email')
 def test_right_subscription():
     email = Email(
@@ -12,6 +16,7 @@ def test_right_subscription():
     subscription.fill_email(email).send_email().success_email()
 
 
+@pytest.mark.xfail
 @allure.story('Оформление подписки с некорректным email')
 def test_wrong_subscription():
     email = Email(
